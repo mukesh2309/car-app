@@ -24,8 +24,6 @@ const BookingScreen = () => {
       <HeaderComponent title="Booking Details" hasBack />
       <ScrollView style={styles.main}>
         <StepperComponent active={3} />
-        <VisaCard />
-
         {renderMarginBottom(6)}
         <View style={styles.switchContainer}>
           <View>
