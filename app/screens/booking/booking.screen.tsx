@@ -13,6 +13,7 @@ import {renderMarginBottom} from '../../utils/ui-utils';
 import {genderData, rentalData} from '../search/view/filter.data';
 import {createStyles} from './booking.styles';
 import Button from '../../components/button /component';
+import VisaCard from '../../components/visaCard/component';
 
 const BookingScreen = () => {
   const styles = createStyles();
@@ -23,6 +24,8 @@ const BookingScreen = () => {
       <HeaderComponent title="Booking Details" hasBack />
       <ScrollView style={styles.main}>
         <StepperComponent active={3} />
+        <VisaCard />
+
         {renderMarginBottom(6)}
         <View style={styles.switchContainer}>
           <View>
