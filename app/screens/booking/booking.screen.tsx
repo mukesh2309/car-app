@@ -12,7 +12,7 @@ import {scale} from '../../theme/scale';
 import {renderMarginBottom} from '../../utils/ui-utils';
 import {genderData, rentalData} from '../search/view/filter.data';
 import {createStyles} from './booking.styles';
-import Button from '../../components/button /component';
+import Button from '../../components/button/component';
 import VisaCard from '../../components/visaCard/component';
 
 const BookingScreen = () => {

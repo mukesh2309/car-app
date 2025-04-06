@@ -6,7 +6,7 @@ import DateTimePicker, {
 import {BottomSheet} from '../bottomSheet/BottomSheet';
 import {View} from 'react-native';
 import {createStyles} from './date.styles';
-import Button from '../button /component';
+import Button from '../button/component';
 
 interface IDateComponentProps {
   visible: boolean;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {Image, ImageBackground, Text, View} from 'react-native';
-import Button from '../../components/button /component';
+import Button from '../../components/button/component';
 import {navigate} from '../../navigators/navigation-utilities';
 import {createStyles} from './onboarding.styles';
 import assets from '../../assets';

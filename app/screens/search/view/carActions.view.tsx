@@ -4,7 +4,7 @@ import {createStyles} from '../search.styles';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import {scale} from '../../../theme/scale';
 import {colors} from '../../../theme/colors';
-import Button from '../../../components/button /component';
+import Button from '../../../components/button/component';
 
 const CarActionView = () => {
   const styles = createStyles();

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, Text, View} from 'react-native';
 import assets from '../../assets';
-import Button from '../../components/button /component';
+import Button from '../../components/button/component';
 import InputComponent from '../../components/input/component';
 import {renderMarginTop} from '../../utils/ui-utils';
 import {createStyles} from './verify.styles';
