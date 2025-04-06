@@ -3,7 +3,7 @@ import {Image, ScrollView, Text, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import assets from '../../assets';
-import Button from '../../components/button /component';
+import Button from '../../components/button/component';
 import InputComponent from '../../components/input/component';
 import {goBack, navigate} from '../../navigators/navigation-utilities';
 import {scale} from '../../theme/scale';

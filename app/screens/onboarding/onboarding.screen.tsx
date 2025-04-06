@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, ImageBackground, Text, View} from 'react-native';
 import assets from '../../assets';
-import Button from '../../components/button /component';
+import Button from '../../components/button/component';
 import {createStyles} from './onboarding.styles';
 import {navigate} from '../../navigators/navigation-utilities';
 

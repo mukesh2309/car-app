@@ -3,7 +3,7 @@ import {Image, ScrollView, Text, View} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import assets from '../../assets';
-import Button from '../../components/button /component';
+import Button from '../../components/button/component';
 import CheckBoxComponent from '../../components/checkbox/component';
 import InputComponent from '../../components/input/component';
 import {scale} from '../../theme/scale';

@@ -4,7 +4,7 @@ import assets from '../../assets';
 import {createStyles} from './reset.styles';
 import {renderMarginBottom, renderMarginTop} from '../../utils/ui-utils';
 import InputComponent from '../../components/input/component';
-import Button from '../../components/button /component';
+import Button from '../../components/button/component';
 import {goBack, navigate} from '../../navigators/navigation-utilities';
 
 const ResetScreen = () => {
