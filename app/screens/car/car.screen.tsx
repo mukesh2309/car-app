@@ -4,7 +4,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import assets from '../../assets';
-import Button from '../../components/button /component';
+import Button from '../../components/button/component';
 import FeatureComponent from '../../components/feature/component';
 import HeaderComponent from '../../components/header/component';
 import ReviewComponent from '../../components/review/component';

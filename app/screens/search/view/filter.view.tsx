@@ -15,7 +15,7 @@ import {IFilterProps} from '../ISearch.props';
 import {createStyles} from '../search.styles';
 import InputComponent from '../../../components/input/component';
 import {data, FuelType, rentalData, sitingCapacity} from './filter.data';
-import Button from '../../../components/button /component';
+import Button from '../../../components/button/component';
 import DateComponent from '../../../components/date/component';
 
 const FilterView = ({visible, setVisible}: IFilterProps) => {

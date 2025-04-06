@@ -2,7 +2,7 @@ import React from 'react';
 import {FlatList, View} from 'react-native';
 import HeaderComponent from '../../components/header/component';
 import {createStyles} from './review.styles';
-import Button from '../../components/button /component';
+import Button from '../../components/button/component';
 import InputComponent from '../../components/input/component';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {colors} from '../../theme/colors';
