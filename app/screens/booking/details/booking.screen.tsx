@@ -2,20 +2,20 @@ import React, {useState} from 'react';
 import {Pressable, ScrollView, Switch, Text, View} from 'react-native';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import DateComponent from '../../components/date/component';
-import HeaderComponent from '../../components/header/component';
-import InputComponent from '../../components/input/component';
-import StepperComponent from '../../components/stepper/component';
-import TabSwitcher from '../../components/tabSwitcher/component';
-import {colors} from '../../theme/colors';
-import {scale} from '../../theme/scale';
-import {renderMarginBottom} from '../../utils/ui-utils';
-import {genderData, rentalData} from '../search/view/filter.data';
+import DateComponent from '../../../components/date/component';
+import HeaderComponent from '../../../components/header/component';
+import InputComponent from '../../../components/input/component';
+import StepperComponent from '../../../components/stepper/component';
+import TabSwitcher from '../../../components/tabSwitcher/component';
+import {colors} from '../../../theme/colors';
+import {scale} from '../../../theme/scale';
+import {renderMarginBottom} from '../../../utils/ui-utils';
+import {genderData, rentalData} from '../../search/view/filter.data';
 import {createStyles} from './booking.styles';
-import Button from '../../components/button /component';
-import VisaCard from '../../components/visaCard/component';
+import Button from '../../../components/button /component';
+import {navigate} from '../../../navigators/navigation-utilities';
 
-const BookingScreen = () => {
+const BookingDetailsScreen = () => {
   const styles = createStyles();
   const [isSwitchOn, setIsSwitchOn] = useState(false);
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -23,7 +23,7 @@ const BookingScreen = () => {
     <View style={styles.container}>
       <HeaderComponent title="Booking Details" hasBack />
       <ScrollView style={styles.main}>
-        <StepperComponent active={3} />
+        <StepperComponent active={1} />
         {renderMarginBottom(6)}
         <View style={styles.switchContainer}>
           <View>
@@ -118,10 +118,14 @@ const BookingScreen = () => {
         />
         {renderMarginBottom(12)}
       </ScrollView>
-      <Button text="Pay Now" buttonStyles={styles.buttonStyle} />
+      <Button
+        onPress={() => navigate('BookingPaymentScreen')}
+        text="Pay Now"
+        buttonStyles={styles.buttonStyle}
+      />
       <DateComponent visible={showDatePicker} setVisible={setShowDatePicker} />
     </View>
   );
 };
 
-export default BookingScreen;
+export default BookingDetailsScreen;

@@ -1,8 +1,8 @@
 import {StyleSheet} from 'react-native';
-import {colors} from '../../theme/colors';
-import {scale} from '../../theme/scale';
-import {FontSize} from '../../theme/font-size';
-import {typography} from '../../theme/typography';
+import {colors} from '../../../theme/colors';
+import {scale} from '../../../theme/scale';
+import {FontSize} from '../../../theme/font-size';
+import {typography} from '../../../theme/typography';
 
 export const createStyles = () =>
   StyleSheet.create({

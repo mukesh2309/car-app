@@ -111,7 +111,7 @@ const CarScreen = () => {
         </View>
       </ScrollView>
       <Button
-        onPress={() => navigate('BookingScreen')}
+        onPress={() => navigate('BookingDetailsScreen')}
         text="Book Now"
         buttonStyles={styles.btn}
       />
