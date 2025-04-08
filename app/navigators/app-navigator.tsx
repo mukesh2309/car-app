@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 /* eslint-disable eqeqeq */
 import React from 'react';
-import {Animated, ImageBackground, Platform, View} from 'react-native';
+import {Animated, Platform, View} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {
@@ -18,25 +18,27 @@ import {navigationRef} from './navigation-utilities';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import AccountScreen from '../screens/account/account.screen';
+import BookingDetailsScreen from '../screens/booking/details/booking.screen';
+import BookingPaymentScreen from '../screens/booking/payment/payment.screen';
+import CarScreen from '../screens/car/car.screen';
 import HomeScreen from '../screens/home/home.screen';
+import MessageScreen from '../screens/message/message.screen';
+import NotificationScreen from '../screens/notification/notification.screen';
 import OnBoardingScreen from '../screens/onboarding/onboarding.screen';
 import OnBoardingScreenTwo from '../screens/onboarding/onboardingTwo.screen';
 import OtpScreen from '../screens/otp/otp.screen';
 import ResetScreen from '../screens/reset/reset.screen';
+import ReviewScreen from '../screens/review/review.screen';
+import SearchScreen from '../screens/search/search.screen';
 import SignUpScreen from '../screens/signup/signup.screen';
 import SignInScreen from '../screens/singin/signin.screen';
 import VerifyScreen from '../screens/verify/verify.screen';
 import {colors} from '../theme/colors';
 import {scale} from '../theme/scale';
 import {createStyle} from './navigation.styles';
-import AccountScreen from '../screens/account/account.screen';
-import NotificationScreen from '../screens/notification/notification.screen';
-import MessageScreen from '../screens/message/message.screen';
-import SearchScreen from '../screens/search/search.screen';
-import CarScreen from '../screens/car/car.screen';
-import ReviewScreen from '../screens/review/review.screen';
-import BookingDetailsScreen from '../screens/booking/details/booking.screen';
-import BookingPaymentScreen from '../screens/booking/payment/payment.screen';
+import BookingConfirmationScreen from '../screens/booking/confirmation/confirmation.screen';
+import BookingStatusScreen from '../screens/booking/status/status.screen';
 
 type NavigationProps = Partial<
   React.ComponentProps<typeof NavigationContainer>
@@ -213,6 +215,20 @@ const RootStack = () => {
       <Stack.Screen
         name="BookingPaymentScreen"
         component={BookingPaymentScreen}
+        options={{
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      />
+      <Stack.Screen
+        name="BookingConfirmationScreen"
+        component={BookingConfirmationScreen}
+        options={{
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      />
+      <Stack.Screen
+        name="BookingStatusScreen"
+        component={BookingStatusScreen}
         options={{
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}

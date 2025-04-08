@@ -8,6 +8,7 @@ const assets = {
   person: require('./images/person.png'),
   tesla: require('./images/tesla.png'),
   ferrari: require('./images/ferrari.png'),
+  success: require('./images/success.png'),
 };
 
 export default assets;
