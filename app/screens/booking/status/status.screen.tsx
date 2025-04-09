@@ -1,15 +1,19 @@
 import React from 'react';
-import { Image, ScrollView, Text, View } from 'react-native';
+import {Image, ScrollView, Text, View} from 'react-native';
 import HeaderComponent from '../../../components/header/component';
-import { createStyles } from './status.styles';
+import {createStyles} from './status.styles';
 import assets from '../../../assets';
-import { renderBoderBottom, renderMarginBottom } from '../../../utils/ui-utils';
+import {renderBoderBottom, renderMarginBottom} from '../../../utils/ui-utils';
 import Button from '../../../components/button/component';
-import { navigate } from '../../../navigators/navigation-utilities';
+import {navigate} from '../../../navigators/navigation-utilities';
+import Feather from 'react-native-vector-icons/Feather';
+import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import {scale} from '../../../theme/scale';
+import {colors} from '../../../theme/colors';
 
 const BookingStatusScreen = () => {
   const styles = createStyles();
-  const { success } = assets;
+  const {success} = assets;
   return (
     <View style={styles.container}>
       <HeaderComponent title="Payment Status" hasBack />
@@ -72,19 +76,29 @@ const BookingStatusScreen = () => {
           </Text>
           <Text style={[styles.value, styles.bold, styles.bl]}>$1415</Text>
         </View>
+        {renderMarginBottom(8)}
         <Button
           text="Download Receipt"
           textStyles={styles.outlineButtonText}
           buttonStyles={styles.downloadBtn}
-          component={<Feather name="download" size={scale(20)} color={colors.gray} />}
+          component={
+            <Feather name="download" size={scale(20)} color={colors.gray} />
+          }
         />
         {renderMarginBottom(14)}
         <Button
           text="Share Your Receipt"
           textStyles={styles.outlineButtonText}
           buttonStyles={styles.shareBtn}
-          component={<EvilIcons name="share-google" size={scale(30)} color={colors.gray} />}
+          component={
+            <EvilIcons
+              name="share-google"
+              size={scale(30)}
+              color={colors.gray}
+            />
+          }
         />
+        {renderMarginBottom(14)}
       </ScrollView>
       <Button
         onPress={() => navigate('BookingStatusScreen')}
