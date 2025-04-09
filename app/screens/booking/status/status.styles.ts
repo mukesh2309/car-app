@@ -1,8 +1,8 @@
-import {StyleSheet} from 'react-native';
-import {colors} from '../../../theme/colors';
-import {scale} from '../../../theme/scale';
-import {FontSize} from '../../../theme/font-size';
-import {typography} from '../../../theme/typography';
+import { StyleSheet } from 'react-native';
+import { colors } from '../../../theme/colors';
+import { scale } from '../../../theme/scale';
+import { FontSize } from '../../../theme/font-size';
+import { typography } from '../../../theme/typography';
 
 export const createStyles = () =>
   StyleSheet.create({
@@ -67,5 +67,28 @@ export const createStyles = () =>
     },
     btn: {
       marginHorizontal: scale(18),
+    },
+    downloadBtn: {
+      backgroundColor: colors.btnBorder,
+      borderWidth: 1,
+      borderColor: colors.btnBorder,
+      flexDirection: 'row',
+      alignItems: 'center',
+      columnGap: scale(8),
+      paddingVertical: scale(10),
+    },
+    shareBtn: {
+      backgroundColor: colors.white,
+      borderWidth: 1,
+      borderColor: colors.btnBorder,
+      flexDirection: 'row',
+      alignItems: 'center',
+      columnGap: scale(8),
+      paddingVertical: scale(10),
+    },
+    outlineButtonText: {
+      color: colors.placeholder,
+      fontFamily: typography.regular,
+      fontSize: FontSize.FONT_14Px,
     },
   });
