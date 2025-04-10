@@ -39,6 +39,7 @@ import {scale} from '../theme/scale';
 import {createStyle} from './navigation.styles';
 import BookingConfirmationScreen from '../screens/booking/confirmation/confirmation.screen';
 import BookingStatusScreen from '../screens/booking/status/status.screen';
+import ProfileScreen from '../screens/account/profile /profile.screen';
 
 type NavigationProps = Partial<
   React.ComponentProps<typeof NavigationContainer>
@@ -68,7 +69,7 @@ const TabStack = () => {
             iconName = focused ? 'message' : 'message';
           } else if (route.name == 'NotificationScreen') {
             iconName = focused ? 'notifications-none' : 'notifications-none';
-          } else if (route.name == 'AccountScreen') {
+          } else if (route.name == 'ProfileScreen') {
             iconName = focused ? 'person-outline' : 'person-outline';
           }
           return (
@@ -122,8 +123,8 @@ const TabStack = () => {
         options={{tabBarLabel: 'Onboarding', tabBarShowLabel: false}}
       />
       <Tab.Screen
-        name="AccountScreen"
-        component={AccountScreen}
+        name="ProfileScreen"
+        component={ProfileScreen}
         options={{tabBarLabel: 'Onboarding', tabBarShowLabel: false}}
       />
     </Tab.Navigator>
