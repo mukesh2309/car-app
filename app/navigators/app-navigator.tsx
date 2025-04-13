@@ -39,7 +39,7 @@ import {scale} from '../theme/scale';
 import {createStyle} from './navigation.styles';
 import BookingConfirmationScreen from '../screens/booking/confirmation/confirmation.screen';
 import BookingStatusScreen from '../screens/booking/status/status.screen';
-import ProfileScreen from '../screens/account/profile /profile.screen';
+import ProfileScreen from '../screens/account/profile/profile.screen';
 
 type NavigationProps = Partial<
   React.ComponentProps<typeof NavigationContainer>
