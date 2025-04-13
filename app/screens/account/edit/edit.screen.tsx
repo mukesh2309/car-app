@@ -9,17 +9,19 @@ import Button from '../../../components/button/component';
 import Feather from 'react-native-vector-icons/Feather';
 import {scale} from '../../../theme/scale';
 import {colors} from '../../../theme/colors';
+import {useEdit} from './edit.hook';
 
 const EditScreen = () => {
   const styles = createStyles();
   const {person} = assets;
-
+  const {photo, selectImage} = useEdit();
+  const source = photo?.uri ? {uri: photo?.uri} : person;
   return (
     <View style={styles.container}>
       <HeaderComponent title="Edit Profile" hasBack />
       <ScrollView style={styles.main}>
-        <Pressable style={styles.profileContainer}>
-          <Image source={person} style={styles.profileImage} />
+        <Pressable onPress={selectImage} style={styles.profileContainer}>
+          <Image source={source} style={styles.profileImage} />
           <View style={styles.editContainer}>
             <Feather name="edit-3" size={scale(12)} color={colors.gray} />
           </View>
