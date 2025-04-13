@@ -42,7 +42,7 @@ export const createStyles = () =>
       fontFamily: typography.regular,
     },
     editProfile: {
-      fontSize: FontSize.FONT_14Px,
+      fontSize: FontSize.FONT_12Px,
       color: colors.placeholder,
       fontFamily: typography.regular,
     },

@@ -1,4 +1,4 @@
-import {View, Text, ScrollView, Image} from 'react-native';
+import {View, Text, ScrollView, Image, Pressable} from 'react-native';
 import React from 'react';
 import HeaderComponent from '../../../components/header/component';
 import {createStyles} from './profile.styles';
@@ -8,7 +8,11 @@ import {colors} from '../../../theme/colors';
 import {scale} from '../../../theme/scale';
 import {renderMarginBottom} from '../../../utils/ui-utils';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 import SingleList from '../../../components/singleList/component';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+import {navigate} from '../../../navigators/navigation-utilities';
 
 const ProfileScreen = () => {
   const styles = createStyles();
@@ -17,6 +21,7 @@ const ProfileScreen = () => {
     <View style={styles.container}>
       <HeaderComponent title="Profile" hasBack />
       <ScrollView style={styles.main}>
+        {renderMarginBottom(6)}
         <View style={styles.profileContainer}>
           <View style={styles.frcg}>
             <Image source={person} style={styles.profileImage} />
@@ -25,10 +30,16 @@ const ProfileScreen = () => {
               <Text style={styles.email}>john@gmail.com</Text>
             </View>
           </View>
-          <View style={styles.aic}>
+          <Pressable
+            onPress={() =>
+              navigate('rootStack', {
+                screen: 'EditScreen',
+              })
+            }
+            style={styles.aic}>
             <Feather name="edit-3" size={scale(18)} color={colors.gray} />
             <Text style={styles.editProfile}>Edit Profile</Text>
-          </View>
+          </Pressable>
         </View>
         {renderMarginBottom(12)}
         <Text style={styles.title}>General</Text>
@@ -46,7 +57,7 @@ const ProfileScreen = () => {
         <SingleList
           component={
             <MaterialCommunityIcons
-              name="cards-heart-outline"
+              name="av-timer"
               size={scale(24)}
               color={colors.gray}
             />
@@ -56,7 +67,7 @@ const ProfileScreen = () => {
         <SingleList
           component={
             <MaterialCommunityIcons
-              name="cards-heart-outline"
+              name="bell-outline"
               size={scale(24)}
               color={colors.gray}
             />
@@ -66,7 +77,7 @@ const ProfileScreen = () => {
         <SingleList
           component={
             <MaterialCommunityIcons
-              name="cards-heart-outline"
+              name="connection"
               size={scale(24)}
               color={colors.gray}
             />
@@ -78,8 +89,8 @@ const ProfileScreen = () => {
         {renderMarginBottom(6)}
         <SingleList
           component={
-            <MaterialCommunityIcons
-              name="cards-heart-outline"
+            <SimpleLineIcons
+              name="settings"
               size={scale(24)}
               color={colors.gray}
             />
@@ -88,8 +99,8 @@ const ProfileScreen = () => {
         />
         <SingleList
           component={
-            <MaterialCommunityIcons
-              name="cards-heart-outline"
+            <Ionicons
+              name="language-outline"
               size={scale(24)}
               color={colors.gray}
             />
@@ -98,9 +109,9 @@ const ProfileScreen = () => {
         />
         <SingleList
           component={
-            <MaterialCommunityIcons
-              name="cards-heart-outline"
-              size={scale(24)}
+            <Ionicons
+              name="person-add-outline"
+              size={scale(20)}
               color={colors.gray}
             />
           }
@@ -108,14 +119,33 @@ const ProfileScreen = () => {
         />
         <SingleList
           component={
+            <MaterialIcons name="policy" size={scale(24)} color={colors.gray} />
+          }
+          text="Privacy Policy"
+        />
+        <SingleList
+          component={
             <MaterialCommunityIcons
-              name="cards-heart-outline"
+              name="headphones"
+              size={scale(24)}
+              color={colors.gray}
+            />
+          }
+          text="Help Support"
+        />
+        <SingleList
+          component={
+            <MaterialCommunityIcons
+              name="logout"
               size={scale(24)}
               color={colors.gray}
             />
           }
           text="Privacy Policy"
         />
+        {renderMarginBottom(32)}
+        {renderMarginBottom(32)}
+        {renderMarginBottom(32)}
       </ScrollView>
     </View>
   );
