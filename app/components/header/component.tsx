@@ -10,7 +10,11 @@ import {scale} from '../../theme/scale';
 import {createStyles} from './header.styles';
 import {IHeaderProps} from './IHeader.props';
 
-const HeaderComponent = ({title, hasBack = false}: IHeaderProps) => {
+const HeaderComponent = ({
+  title,
+  hasBack = false,
+  actionComponent,
+}: IHeaderProps) => {
   const styles = createStyles();
   const {logo_black, person} = assets;
 
@@ -31,8 +35,9 @@ const HeaderComponent = ({title, hasBack = false}: IHeaderProps) => {
             <Text style={styles.titleStyle}>{title}</Text>
           </React.Fragment>
         )}
+        {actionComponent}
       </View>
-      {hasBack && <Text style={[styles.titleStyle, styles.t20]}>{title}</Text>}
+      {title && <Text style={[styles.titleStyle, styles.t20]}>{title}</Text>}
       <View style={styles.flexRow}>
         {hasBack ? (
           <Pressable style={styles.borderRound}>
