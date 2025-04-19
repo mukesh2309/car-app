@@ -1,4 +1,4 @@
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, Pressable} from 'react-native';
 import React from 'react';
 import {createStyles} from '../message.styles';
 import assets from '../../../assets';
@@ -9,6 +9,7 @@ interface ISingleItemProps {
   message: string;
   time: string;
   badge: number;
+  onPress: () => void;
 }
 const SingleItem = ({
   name,
@@ -16,10 +17,11 @@ const SingleItem = ({
   time,
   badge,
   isHighlighted,
+  onPress = () => {},
 }: ISingleItemProps) => {
   const styles = createStyles(isHighlighted);
   return (
-    <View style={styles.singleItem}>
+    <Pressable onPress={onPress} style={styles.singleItem}>
       <Image source={assets.person} style={styles.person} />
       <View style={styles.messageContainer}>
         <Text style={styles.name}>John Doe</Text>
@@ -35,7 +37,7 @@ const SingleItem = ({
         )}
         <Text style={styles.time}>12:00 PM</Text>
       </View>
-    </View>
+    </Pressable>
   );
 };
 

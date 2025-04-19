@@ -9,6 +9,7 @@ import InputComponent from '../../components/input/component';
 import {scale} from '../../theme/scale';
 import SingleItem from './component/singleItem';
 import {renderBoderBottom} from '../../utils/ui-utils';
+import {navigate} from '../../navigators/navigation-utilities';
 
 const MessageScreen = () => {
   const styles = createStyles();
@@ -28,7 +29,18 @@ const MessageScreen = () => {
         <FlatList
           data={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}
           renderItem={({item}) => (
-            <SingleItem isHighlighted={[1, 2, 3, 6].includes(item)} />
+            <SingleItem
+              onPress={() =>
+                navigate('rootStack', {
+                  screen: 'ChatScreen',
+                })
+              }
+              isHighlighted={[1, 2, 3, 6].includes(item)}
+              name={''}
+              message={''}
+              time={''}
+              badge={0}
+            />
           )}
         />
         {renderBoderBottom(90)}

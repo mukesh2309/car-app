@@ -18,9 +18,12 @@ import {navigationRef} from './navigation-utilities';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import AccountScreen from '../screens/account/account.screen';
+import EditScreen from '../screens/account/edit/edit.screen';
+import ProfileScreen from '../screens/account/profile/profile.screen';
+import BookingConfirmationScreen from '../screens/booking/confirmation/confirmation.screen';
 import BookingDetailsScreen from '../screens/booking/details/booking.screen';
 import BookingPaymentScreen from '../screens/booking/payment/payment.screen';
+import BookingStatusScreen from '../screens/booking/status/status.screen';
 import CarScreen from '../screens/car/car.screen';
 import HomeScreen from '../screens/home/home.screen';
 import MessageScreen from '../screens/message/message.screen';
@@ -37,10 +40,7 @@ import VerifyScreen from '../screens/verify/verify.screen';
 import {colors} from '../theme/colors';
 import {scale} from '../theme/scale';
 import {createStyle} from './navigation.styles';
-import BookingConfirmationScreen from '../screens/booking/confirmation/confirmation.screen';
-import BookingStatusScreen from '../screens/booking/status/status.screen';
-import ProfileScreen from '../screens/account/profile/profile.screen';
-import EditScreen from '../screens/account/edit/edit.screen';
+import ChatScreen from '../screens/message/chat/chat.screen';
 
 type NavigationProps = Partial<
   React.ComponentProps<typeof NavigationContainer>
@@ -238,6 +238,13 @@ const RootStack = () => {
       <Stack.Screen
         name="EditScreen"
         component={EditScreen}
+        options={{
+          cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+        }}
+      />
+      <Stack.Screen
+        name="ChatScreen"
+        component={ChatScreen}
         options={{
           cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
         }}
