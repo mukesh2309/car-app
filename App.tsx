@@ -1,21 +1,14 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
 import {AppNavigator} from './app/navigators/app-navigator';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {colors} from './app/theme/colors';
 
 const App = () => {
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={{flex: 1, backgroundColor: colors.background}}>
       <AppNavigator />
-    </View>
+    </SafeAreaView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: colors.white,
-  },
-});
 
 export default App;

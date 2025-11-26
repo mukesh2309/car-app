@@ -5,17 +5,24 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "device": "npx react-native run-android --deviceId 5c61cef3 ",
     "lint": "eslint .",
     "start": "react-native start",
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-community/slider": "^4.5.6",
     "@react-navigation/bottom-tabs": "^7.2.1",
     "@react-navigation/native": "^7.0.13",
     "@types/react-native-vector-icons": "^6.4.18",
+    "dayjs": "^1.11.13",
+    "moment": "^2.30.1",
     "react": "19.0.0",
     "react-native": "0.78.0",
+    "react-native-image-picker": "^8.2.0",
+    "react-native-linear-gradient": "^2.8.3",
     "react-native-safe-area-context": "^5.0.0",
+    "react-native-ui-datepicker": "^3.1.2",
     "react-native-vector-icons": "^10.2.0"
   },
   "devDependencies": {
