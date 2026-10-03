@@ -56,6 +56,6 @@ With the growing demand for shared mobility and car rental services, this app is
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/car-app.git
+git clone https://github.com/mukesh2309/car-app.git
 cd car-app
 ```
